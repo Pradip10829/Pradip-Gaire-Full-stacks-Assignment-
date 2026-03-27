@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Demo</title>
+    <style>
+      body { font-family: "Trebuchet MS", sans-serif; margin: 0; background: #f5f7fb; color: #17212b; }
+      main { max-width: 920px; margin: auto; padding: 1.2rem; }
+      .stack { display: grid; gap: 1rem; }
+      .layer { border-radius: 14px; padding: 1rem; color: #fff; box-shadow: 0 10px 24px rgba(0,0,0,.1); }
+      .frontend { background: #0f766e; }
+      .backend { background: #0c4a6e; }
+      .db { background: #7c2d12; }
+      button { border: 0; border-radius: 8px; padding: .6rem .9rem; background: #111827; color: #fff; cursor: pointer; }
+      #log { background: #fff; border: 1px solid #d4dae0; border-radius: 12px; padding: .9rem; min-height: 120px; margin-top: .9rem; }
+      a { color: #0c4a6e; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Working Demo: Full Stack Request Lifecycle</h1>
+      <p>This simulation demonstrates how a browser request moves through an API layer to a database and back.</p>
+
+      <div class="stack">
+        <div class="layer frontend"><strong>Front-End</strong><br />User clicks a button to request profile data.</div>
+        <div class="layer backend"><strong>Back-End API</strong><br />Server validates request and applies business logic.</div>
+        <div class="layer db"><strong>Database</strong><br />Query retrieves the requested record.</div>
+      </div>
+
+      <p><button id="simulate">Run Request Simulation</button></p>
+      <div id="log" aria-live="polite"></div>
+      <p><a href="../index.html">Back to ePortfolio</a></p>
+    </main>
+
+    <script>
+      const log = document.getElementById('log');
+      const steps = [
+        '1) Browser sends GET /api/profile',
+        '2) API validates authentication token',
+        '3) Back-end calls database query',
+        '4) Database returns user record',
+        '5) API formats JSON response',
+        '6) Front-end renders profile data'
+      ];
+
+      document.getElementById('simulate').addEventListener('click', async () => {
+        log.innerHTML = '';
+        for (const step of steps) {
+          await new Promise(resolve => setTimeout(resolve, 500));
+          const item = document.createElement('p');
+          item.textContent = step;
+          log.appendChild(item);
+        }
+      });
+    </script>
+  </body>
+</html>

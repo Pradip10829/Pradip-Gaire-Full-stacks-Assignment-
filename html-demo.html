@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Demo</title>
+    <style>
+      body { font-family: Georgia, serif; margin: 0; background: #fcfcff; color: #111; }
+      main { max-width: 900px; margin: auto; padding: 1rem; }
+      .panel { background: #fff; border: 1px solid #d9dfeb; border-radius: 12px; padding: 1rem; margin: .8rem 0; }
+      label { display: block; margin-top: .6rem; }
+      input, select, textarea { width: 100%; padding: .5rem; border-radius: 6px; border: 1px solid #bfc8d8; }
+      table { width: 100%; border-collapse: collapse; margin-top: .8rem; }
+      th, td { border: 1px solid #cbd5e1; padding: .5rem; }
+      th { background: #eff6ff; }
+      a { color: #1d4ed8; }
+    </style>
+  </head>
+  <body>
+    <header class="panel">
+      <h1>Working Demo: Semantic HTML</h1>
+      <p>This page demonstrates semantic structure, form accessibility, and tabular content.</p>
+    </header>
+
+    <main>
+      <section class="panel" aria-labelledby="profile-title">
+        <h2 id="profile-title">Profile Section</h2>
+        <article>
+          <h3>Junior Full Stack Candidate</h3>
+          <p>I build responsive interfaces and connect them to secure APIs and database services.</p>
+        </article>
+      </section>
+
+      <section class="panel" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills Table</h2>
+        <table>
+          <caption>Technical skills and confidence level</caption>
+          <thead>
+            <tr><th scope="col">Skill</th><th scope="col">Level</th><th scope="col">Evidence</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">HTML</th><td>Advanced</td><td>Semantic and accessible page structures</td></tr>
+            <tr><th scope="row">CSS</th><td>Advanced</td><td>Responsive layouts and animations</td></tr>
+            <tr><th scope="row">JavaScript</th><td>Intermediate/Advanced</td><td>Dynamic and stateful UI behavior</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel" aria-labelledby="contact-title">
+        <h2 id="contact-title">Accessible Contact Form</h2>
+        <form>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" required autocomplete="name" />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required autocomplete="email" />
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="">Select an option</option>
+            <option>Project Collaboration</option>
+            <option>Internship Opportunity</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <p><button type="submit">Submit</button></p>
+        </form>
+      </section>
+
+      <footer class="panel">
+        <a href="../index.html">Back to ePortfolio</a>
+      </footer>
+    </main>
+  </body>
+</html>

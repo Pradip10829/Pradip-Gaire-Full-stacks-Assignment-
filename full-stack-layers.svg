@@ -1,0 +1,25 @@
+<svg width="900" height="540" viewBox="0 0 900 540" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Full Stack Architecture Layers</title>
+  <desc id="desc">A three-layer diagram showing browser front-end, API back-end, and database with request and response arrows.</desc>
+  <rect width="900" height="540" fill="#F4FBFA"/>
+  <rect x="90" y="70" width="720" height="110" rx="16" fill="#0F766E"/>
+  <text x="450" y="118" text-anchor="middle" font-size="30" fill="#FFFFFF" font-family="Arial">Front-End (Client Browser)</text>
+  <text x="450" y="150" text-anchor="middle" font-size="20" fill="#D6F8F2" font-family="Arial">HTML + CSS + JavaScript</text>
+
+  <rect x="90" y="220" width="720" height="110" rx="16" fill="#0C4A6E"/>
+  <text x="450" y="268" text-anchor="middle" font-size="30" fill="#FFFFFF" font-family="Arial">Back-End (Server/API)</text>
+  <text x="450" y="300" text-anchor="middle" font-size="20" fill="#D7EEFF" font-family="Arial">Routing + Business Logic + Authentication</text>
+
+  <rect x="90" y="370" width="720" height="110" rx="16" fill="#7C2D12"/>
+  <text x="450" y="418" text-anchor="middle" font-size="30" fill="#FFFFFF" font-family="Arial">Database Layer</text>
+  <text x="450" y="450" text-anchor="middle" font-size="20" fill="#FFE3D8" font-family="Arial">Persistent Storage (SQL / NoSQL)</text>
+
+  <path d="M450 185 L450 215" stroke="#0F766E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M438 205 L450 220 L462 205" fill="none" stroke="#0F766E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M450 335 L450 365" stroke="#0C4A6E" stroke-width="6" stroke-linecap="round"/>
+  <path d="M438 355 L450 370 L462 355" fill="none" stroke="#0C4A6E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="518" y="204" font-size="18" fill="#1D2630" font-family="Arial">HTTP Request</text>
+  <text x="518" y="352" font-size="18" fill="#1D2630" font-family="Arial">Data Query</text>
+</svg>
